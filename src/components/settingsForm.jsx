@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { useNavigate } from "react-router-dom";
 
 class SettingsForm extends Component {
     render() {
@@ -18,8 +19,13 @@ class SettingsForm extends Component {
         console.log("handleChangePassword");
     }
     handleLogout = () => {
-        console.log("handleLogout");
+        this.props.navigate('/logout'); 
     }
 };
 
-export default SettingsForm; 
+function SettingsFormInit(props) {
+    let navigate = useNavigate();
+    return <SettingsForm navigate={navigate} />
+}
+
+export default SettingsFormInit; 

@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "./auth";
 
 class LoginForm extends Component {
     render() {
@@ -7,7 +9,7 @@ class LoginForm extends Component {
                 <h4>Welcome to the Banking Web App</h4>
                 <div>
                     <p>Login: </p>
-                    <input type="text" className="" />
+                    <input type="text" onChange={(e) => this.props.setUser(e.target.value)} />
                 </div>
                 <div>
                     <p>Password: </p>
@@ -20,11 +22,19 @@ class LoginForm extends Component {
     }
 
     handleLogin = () => {
-        console.log("handleLogin");
+        this.props.auth.login(this.props.user); 
+        this.props.navigate('/profile', {replace: true}); 
     }
     handleForgotPassword = () => {
         console.log("handleForgotPassword");
     }
 };
 
-export default LoginForm; 
+function LoginFormWithNav(props) {
+    const [user, setUser] = useState(''); 
+    const auth = useAuth(); 
+    let navigate = useNavigate();
+    return <LoginForm navigate={navigate} auth={auth} user={user} setUser={setUser} />
+}
+
+export default LoginFormWithNav; 

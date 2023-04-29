@@ -22,9 +22,9 @@ class ChangePswdForm extends Component {
     }
 };
 
-function WithNavigate(props) {
+function ChangePswdFormWithNav(props) {
     let navigate = useNavigate();
     return <ChangePswdForm navigate={navigate} />
 }
 
-export default WithNavigate
+export default ChangePswdFormWithNav; 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "./auth";
 
 class Navbar extends Component {
     render() {
@@ -9,8 +10,8 @@ class Navbar extends Component {
 
     isAuthenticated() {
         // Send request to the server to determine if a user is authenticated.
-        // Note: timeout should be taken into account as well
-        return true; 
+        // Note: timeout could be taken into account as well
+        return this.props.auth.user; 
     }
 
     renderAuthenticated() {
@@ -33,4 +34,10 @@ class Navbar extends Component {
     }
 };
 
-export default Navbar; 
+function NavbarInit(props) {
+    const auth = useAuth(); 
+    return <Navbar auth={auth} />
+}
+
+export default NavbarInit; 
+
