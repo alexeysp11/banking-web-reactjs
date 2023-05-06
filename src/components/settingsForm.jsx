@@ -6,20 +6,11 @@ class SettingsForm extends Component {
         return (
             <React.Fragment>
                 <h4>Settings</h4>
-                <a href="/changepswd">
-                    <button onClick={this.handleChangePassword} className="btn btn-secondary btn-sm">Change password</button>
-                </a>
+                <button onClick={() => this.props.navigate('/changepswd')} className="btn btn-secondary btn-sm">Change password</button>
                 <br />
-                <button onClick={this.handleLogout} className="btn btn-secondary btn-sm">Logout</button>
+                <button onClick={() => this.props.navigate('/logout')} className="btn btn-secondary btn-sm">Logout</button>
             </React.Fragment>
         );
-    }
-
-    handleChangePassword = () => {
-        console.log("handleChangePassword");
-    }
-    handleLogout = () => {
-        this.props.navigate('/logout'); 
     }
 };
 

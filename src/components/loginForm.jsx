@@ -26,15 +26,15 @@ class LoginForm extends Component {
         this.props.navigate('/profile', {replace: true}); 
     }
     handleForgotPassword = () => {
-        console.log("handleForgotPassword");
+        this.props.navigate('/forgotpswd'); 
     }
 };
 
-function LoginFormWithNav(props) {
+function LoginFormInit(props) {
     const [user, setUser] = useState(''); 
     const auth = useAuth(); 
     let navigate = useNavigate();
     return <LoginForm navigate={navigate} auth={auth} user={user} setUser={setUser} />
 }
 
-export default LoginFormWithNav; 
+export default LoginFormInit; 

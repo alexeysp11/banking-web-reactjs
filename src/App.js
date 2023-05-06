@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/home';
 import LoginForm from './components/loginForm';
+import ForgotPswd from './components/forgotPswd';
 import SettingsForm from './components/settingsForm';
 import ChangePswdForm from './components/changePswdForm';
 import Profile from './components/profile';
@@ -21,6 +22,7 @@ function App() {
                     <Route path='/home' element={<Home />}></Route>
                     <Route path='/about' element={<Home />}></Route>
                     <Route path='/login' element={<LoginForm />}></Route>
+                    <Route path='/forgotpswd' element={<ForgotPswd />}></Route>
                     <Route path='/settings' element={<SettingsForm />}></Route>
                     <Route path='/profile' element={<Profile />}></Route>
                     <Route path='/changepswd' element={<ChangePswdForm />}></Route>
