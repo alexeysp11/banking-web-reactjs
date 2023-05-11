@@ -18,6 +18,10 @@ class Navbar extends Component {
         return (
             <nav>
                 <NavLink to='/'>Home</NavLink>
+                <NavLink to='/about'>About us</NavLink>
+                <NavLink to='/contacts'>Contacts</NavLink>
+                <NavLink to='/services'>Services</NavLink>
+                <NavLink to='/atmsbranches'>ATMs & Branches</NavLink>
                 <NavLink to='/profile'>Profile</NavLink>
                 <NavLink to='/settings'>Settings</NavLink>
                 <NavLink to='/logout'>Logout</NavLink>
@@ -28,6 +32,10 @@ class Navbar extends Component {
         return (
             <nav>
                 <NavLink to='/'>Home</NavLink>
+                <NavLink to='/about'>About us</NavLink>
+                <NavLink to='/contacts'>Contacts</NavLink>
+                <NavLink to='/services'>Services</NavLink>
+                <NavLink to='/atmsbranches'>ATMs & Branches</NavLink>
                 <NavLink to='/login'>Login</NavLink>
             </nav>
         ); 

@@ -1,6 +1,10 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/home';
+import About from './components/about';
+import Contacts from './components/contacts';
+import Services from './components/services';
+import AtmsBranches from './components/atmsBranches';
 import LoginForm from './components/loginForm';
 import ForgotPswd from './components/forgotPswd';
 import SettingsForm from './components/settingsForm';
@@ -20,7 +24,10 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home />}></Route>
                     <Route path='/home' element={<Home />}></Route>
-                    <Route path='/about' element={<Home />}></Route>
+                    <Route path='/about' element={<About />}></Route>
+                    <Route path='/contacts' element={<Contacts />}></Route>
+                    <Route path='/services' element={<Services />}></Route>
+                    <Route path='/atmsbranches' element={<AtmsBranches />}></Route>
                     <Route path='/login' element={<LoginForm />}></Route>
                     <Route path='/forgotpswd' element={<ForgotPswd />}></Route>
                     <Route path='/settings' element={<SettingsForm />}></Route>

@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 
-class Home extends Component {
+class Services extends Component {
     render() {
         return (
             <React.Fragment>
-                <h4>Home page</h4>
-                <h5>Exchange rates</h5>
+                <h4>Services</h4>
             </React.Fragment>
         );
     }
 };
 
-export default Home; 
+export default Services; 
